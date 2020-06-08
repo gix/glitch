@@ -1,0 +1,10 @@
+﻿#ifdef _DEBUG
+#define SHADER_BUILD_PATH x64\\Debug
+#else
+#define SHADER_BUILD_PATH x64\\Release
+#endif
+
+#define SHADER_PATH(x) SHADER_BUILD_PATH ## \\ ## x
+
+100 SHADER SHADER_PATH(ImageEffectVS.cso)
+200 SHADER SHADER_PATH(DigitalGlitchPS.cso)
